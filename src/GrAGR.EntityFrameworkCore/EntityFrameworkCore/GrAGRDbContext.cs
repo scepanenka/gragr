@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GrAGR.Entities;
+using Microsoft.EntityFrameworkCore;
 using GrAGR.Users;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
@@ -19,6 +20,13 @@ namespace GrAGR.EntityFrameworkCore
     [ConnectionStringName("Default")]
     public class GrAGRDbContext : AbpDbContext<GrAGRDbContext>
     {
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Organization> Organizations { get; set; }
+        public virtual DbSet<Position> Positions { get; set; }
+        public virtual DbSet<ClientOrders> ClientOrders { get; set; }
+
         public DbSet<AppUser> Users { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.

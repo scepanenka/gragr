@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Volo.Abp.Domain.Entities.Auditing;
 
 namespace GrAGR.Entities
@@ -9,6 +7,6 @@ namespace GrAGR.Entities
     {
         public string Name { get; set; }
 
-//        public ICollection<Order> Orders { get; set; }
+        // public ICollection<Order> Orders { get; set; }
     }
 }
