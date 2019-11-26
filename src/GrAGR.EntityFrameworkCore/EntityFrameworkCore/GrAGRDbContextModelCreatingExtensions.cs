@@ -43,7 +43,7 @@ namespace GrAGR.EntityFrameworkCore
             });
             builder.Entity<Order>(b =>
             {
-                b.ToTable(GrAGRConsts.DbTablePrefix + "Organizations", GrAGRConsts.DbSchema);
+                b.ToTable(GrAGRConsts.DbTablePrefix + "Orders", GrAGRConsts.DbSchema);
                 b.ConfigureAuditedAggregateRoot();
             });
         }
