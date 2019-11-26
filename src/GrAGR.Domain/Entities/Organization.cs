@@ -6,7 +6,6 @@ namespace GrAGR.Entities
     public class Organization : AuditedAggregateRoot<int>
     {
         public string Name { get; set; }
-
-        // public ICollection<Order> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
     }
 }

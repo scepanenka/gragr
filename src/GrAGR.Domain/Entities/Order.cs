@@ -10,7 +10,7 @@ namespace GrAGR.Entities
         [ForeignKey("Organization")]
         public int OrganizationId { get; set; }
         [ForeignKey("Receptionist")]
-        public int ReceptionistId { get; set; }
+        public Guid ReceptionistId { get; set; }
         public DateTime DateReceipt { get; set; }
         public DateTime DateExecution { get; set; }
         public string Number { get; set; }

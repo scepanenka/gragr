@@ -17,9 +17,34 @@ namespace GrAGR.EntityFrameworkCore
 
             builder.Entity<Organization>(b =>
             {
-                b.ToTable(GrAGRConsts.DbTablePrefix + "Organization", GrAGRConsts.DbSchema);
+                b.ToTable(GrAGRConsts.DbTablePrefix + "Organizations", GrAGRConsts.DbSchema);
                 b.ConfigureAuditedAggregateRoot();
-                b.Property(x => x.Name).IsRequired().HasMaxLength(128);
+            });
+            
+            builder.Entity<Position>(b =>
+            {
+                b.ToTable(GrAGRConsts.DbTablePrefix + "Positions", GrAGRConsts.DbSchema);
+                b.ConfigureAuditedAggregateRoot();
+            });
+            builder.Entity<ClientOrders>(b =>
+            {
+                b.ToTable(GrAGRConsts.DbTablePrefix + "ClientOrders", GrAGRConsts.DbSchema); 
+                b.ConfigureAuditedAggregateRoot();
+            });
+            builder.Entity<Client>(b =>
+            {
+                b.ToTable(GrAGRConsts.DbTablePrefix + "Clients", GrAGRConsts.DbSchema);
+                b.ConfigureAuditedAggregateRoot();
+            });
+            builder.Entity<Employee>(b =>
+            {
+                b.ToTable(GrAGRConsts.DbTablePrefix + "Employees", GrAGRConsts.DbSchema);
+                b.ConfigureAuditedAggregateRoot();
+            });
+            builder.Entity<Order>(b =>
+            {
+                b.ToTable(GrAGRConsts.DbTablePrefix + "Organizations", GrAGRConsts.DbSchema);
+                b.ConfigureAuditedAggregateRoot();
             });
         }
 
